@@ -15,7 +15,7 @@
 
     <aside id="flexwrap">
         <div id="textwrap">
-            <span id="text1"><a href="#">Home</a></span>
+            <span id="text1" onclick="window.location.href='/';">Home</span>
             <span id="text2">Profile</span>
             <span id="text4">Contact</span>
             <span id="text5">Settings</span>
@@ -108,12 +108,12 @@
 
                     <div class="match_champ">
                         <h2><%= matchdata[i].info.participants[participantID[i]].championName %></h2>
-                        <p>KP - 100%</p>
+                        <p>KP - <%= Math.round((matchdata[i].info.participants[participantID[i]].kills + matchdata[i].info.participants[participantID[i]].assists ) / matchdata[i].info.teams[1].objectives.champion.kills * 100) %> %</p>
                     </div>
 
                     <div class="match_stats">
                         <h4>Kda</h4>
-                        <p>4 / 2 / 0</p>
+                        <p><%= matchdata[i].info.participants[participantID[i]].kills %> / <%= matchdata[i].info.participants[participantID[i]].deaths %> / <%= matchdata[i].info.participants[participantID[i]].assists %></p>
                     </div>
 
                 </div>

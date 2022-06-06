@@ -2,7 +2,7 @@ const fetch = require('node-fetch');
 var express = require('express');
 const res = require('express/lib/response');
 var router = express.Router();
-const api_key = "RGAPI-26455e81-acb2-4905-bf5c-766ab2693671";
+const api_key = "RGAPI-92dfe0d3-e996-43e3-a868-73d5f9d71ecf";
 
 router.get('/', async function (req, res) {
     const name = req.query.search;
@@ -22,7 +22,8 @@ router.get('/', async function (req, res) {
             }
         }
     }
-    console.log(json2[0].tier)
+
+    console.log(json1)
     res.render("user", { id: json.id ,level: json.summonerLevel, icon_link: iconLink, name:json.name, matchdata: matchdata, participantID: participantID, tier:json2[0].tier ,rank:json2[0].rank })    
     
 })
