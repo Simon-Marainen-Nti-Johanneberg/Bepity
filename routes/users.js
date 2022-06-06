@@ -2,7 +2,7 @@ const fetch = require('node-fetch');
 var express = require('express');
 const res = require('express/lib/response');
 var router = express.Router();
-const api_key = "";
+const api_key = "RGAPI-92dfe0d3-e996-43e3-a868-73d5f9d71ecf";
 
 router.get('/', async function (req, res) {
     const name = req.query.search;
