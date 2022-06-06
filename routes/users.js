@@ -23,7 +23,6 @@ router.get('/', async function (req, res) {
         }
     }
 
-    console.log(json1)
     res.render("user", { id: json.id ,level: json.summonerLevel, icon_link: iconLink, name:json.name, matchdata: matchdata, participantID: participantID, tier:json2[0].tier ,rank:json2[0].rank })    
     
 })
